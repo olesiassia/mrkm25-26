@@ -17,6 +17,7 @@ int main(void) {
     mpz_powm(s1, B, a, p);
     mpz_powm(s2, A, b, p);
 
-    gmp_printf("Shared secret: 0x%Zx\n", s1);
+    gmp_printf("B^a: 0x%Zx\n", s1);
+    gmp_printf("A^b: 0x%Zx\n", s2);
     mpz_clears(p, g, a, b, A, B, s1, s2, NULL);
 }
